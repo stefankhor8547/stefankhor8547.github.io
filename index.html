@@ -1,9 +1,122 @@
 <html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+  </head>
 
-<body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+  <body>
+    <!-- navbar -->
+    <header>
+      <img class="logo" src="logo.png" alt="logo">
+      <nav>
+        <ul class="navLink">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta"><button>Contact</button></a>
+    </header>
 
+
+    <!-- Home Page -->
+    <div class="home">
+
+      <div class="leftdiv">
+        <h1 class="homewelcome">Hello !</h1>
+        <h1 class="homeintro">I am Khor Jia Quan, Final Year Computer Science Student @ MMU Cyberjaya</h1>
+      </div>
+      
+      <div class="rightdiv">
+        <img src="homeimage.jpg">
+      </div>
+    
+    </div>
+
+    <hr>
+
+      <!-- Home Page -->
+      <div class="home">
+
+        
+        <div class="rightdiv">
+          <img src="homeimage.jpg">
+        </div>
+        
+        <div class="leftdiv">
+          <h1 class="homewelcome">Hello !</h1>
+          <h1 class="homeintro"></h1>
+        </div>
+
+      </div>
+    <hr>
+
+      <!-- Home Page -->
+      <div class="home">
+
+        <div class="leftdiv">
+          <h1 class="homewelcome">Hello !</h1>
+          <h1 class="homeintro"></h1>
+        </div>
+        
+        <div class="rightdiv">
+          <img src="homeimage.jpg">
+        </div>
+      
+      </div>
+
+  </body>
+
+  <script>
+    //JavaScript to show/hide navbar on scroll
+    // let lastScrollTop = 0;
+    
+    // window.addEventListener("scroll", function() {
+    //     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    //     if (currentScroll > lastScrollTop) {
+    //         // Scroll down
+    //         document.querySelector("header").style.transform = "translateY(-100%)";
+    //     } else {
+    //         // Scroll up
+    //         document.querySelector("header").style.transform = "translateY(0)";
+    //     }
+    //     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    // });
+
+// // JavaScript to smooth hard scroll between sections
+// document.addEventListener('DOMContentLoaded', function() {
+//     const sections = document.querySelectorAll('.home');
+//     let currentSectionIndex = 0;
+
+//     // Scroll to the next section
+//     function scrollToNextSection() {
+//         currentSectionIndex++;
+//         if (currentSectionIndex >= sections.length) {
+//             currentSectionIndex = sections.length - 1;
+//         }
+//         sections[currentSectionIndex].scrollIntoView({ behavior: 'instant', block: 'start' });
+//     }
+
+//     // Scroll to the previous section (if needed)
+//     function scrollToPreviousSection() {
+//         currentSectionIndex--;
+//         if (currentSectionIndex < 0) {
+//             currentSectionIndex = 0;
+//         }
+//         sections[currentSectionIndex].scrollIntoView({ block: 'start',behavior: 'instant' });
+//     }
+
+//     // Detect scroll events and determine direction
+//     function handleScroll(event) {
+//         const delta = event.deltaY;
+//         if (delta > 0) {
+//             scrollToNextSection();
+//         } else if (delta < 0) {
+//             scrollToPreviousSection();
+//         }
+//     }
+
+//     // Add scroll event listener
+//     document.addEventListener('wheel', handleScroll);
+// });
+    </script>
 </html>
