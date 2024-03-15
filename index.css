@@ -13,6 +13,10 @@
     color:black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a, button{
     font-size: 16px;
     font-weight: 500;
@@ -57,7 +61,9 @@ header a:hover{
 
 header button{
     padding: 9px 25px;
-    background-color: antiquewhite;
+    background-color: #ff8928;
+    color: white;
+    font-weight: bolder;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -69,7 +75,7 @@ header button:hover{
     color: white;
 }
 
-.home,.selfIntro{
+.home,.selfIntro,.skills{
     display: flex;
     height: 100vh;
     scroll-snap-align: start;
@@ -80,6 +86,43 @@ header button:hover{
     justify-content: center;
 }
 
+
+.skills{
+    height: 30vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.skills h1{
+    margin-top: 1em;
+    font-weight: lighter;
+}
+
+.skillLogo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap:3em;
+    overflow-x: hidden;
+}
+
+.skill-img-wrapper{
+    height: 150px;
+    width:auto;
+    max-width: 100%;
+}
+
+.skillLogo img{
+    height: 100%;
+    width: auto;
+    max-width: 100%; 
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+  }
 
 hr{
     margin: 0 12%;
@@ -119,9 +162,16 @@ hr{
     width:100%;
 }
 
+.EClogo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .EClogo img{
-    height: 8em;
-    margin-right: 50px;
+    height: 10vh;
+    margin: 30px;
 }
 
 .marginR0{
@@ -137,8 +187,7 @@ hr{
 
 .homeintro1{
     font-size: 3em;
-    padding-bottom: 0.5em;
-    font-weight: 280;
+    font-weight: 600;
 }
 
 .homeintro2{
@@ -244,4 +293,28 @@ footer button:hover{
 .scrollItem button:hover{
     background-color: #ffbb83;
     color: white;
+}
+
+.slide img {
+    width: 100px;
+    height: 100px;
+    animation: scroll 60s linear infinite;
+  }
+  
+.slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+}
+
+.slider {
+    margin-top: 70px;
+    background-color: whitesmoke;
+    padding: 8em 2em;
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
 }
