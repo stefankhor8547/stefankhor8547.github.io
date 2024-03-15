@@ -42,20 +42,12 @@ header img{
     margin-right: auto;
 }
 
-.navLink{
-    list-style: none;
-}
-
-.navLink li{
-    display: inline-block;
+header a{
     padding: 0 20px;
-}
-
-.navLink li a{
     transition: all 0.3s ease 0s;
 }
 
-.navLink li a:hover{
+header a:hover{
     color: #000000;
 }
 
@@ -66,21 +58,19 @@ header button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    margin-left: 20px;
 }
 
 header button:hover{
     background-color: blue;
 }
 
-
 .home{
     display: flex;
     height: 100vh;
-    width: var(--constant-site-width);
     scroll-snap-align: start;
     margin-left: calc((100% - var(--constant-site-width)) / 2);
-    margin-right: calc((100% - var(--constant-site-width)) / 2);
+    margin-left: calc((100% - var(--constant-site-width)) / 2);
+    width: var(--constant-site-width);
 }
 
 
