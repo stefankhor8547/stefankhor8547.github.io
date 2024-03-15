@@ -47,10 +47,12 @@ header a{
     padding: 0 20px;
     transition: all 0.3s ease 0s;
     display: inline-block;
+    font-size: 1.5em;
+    color: black;
 }
 
 header a:hover{
-    color: #000000;
+    color: purple;
 }
 
 header button{
@@ -63,7 +65,8 @@ header button{
 }
 
 header button:hover{
-    background-color: blue;
+    background-color: purple;
+    color: white;
 }
 
 .home,.selfIntro{
@@ -90,10 +93,39 @@ hr{
     flex-direction: column;
     align-items: left;
     justify-content: center;
+    overflow: hidden;
 }
 
-.rightdiv img{
+.flexRow{
+    flex-direction: row;
+    align-items: center;
+}
+
+.SIwrapper{
     width:100%;
+    height: 100%;
+    padding:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nopadding{
+    padding:0;
+}
+
+.w100 img{
+    width:100%;
+}
+
+.EClogo img{
+    height: 8em;
+    margin-right: 50px;
+}
+
+.marginR0{
+    margin-right: 0;
 }
 
 .homewelcome{
@@ -163,25 +195,33 @@ footer button:hover{
 }
   
 .scrollSection {
-
+    width: 100%;
 }
 
 .scrollContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    position: relative;
+    width: 100%;
+}
+
 
 .scrollItem {
-    flex: 0 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
     transition: opacity 1s ease;
 }
 
 .SITitle{
     font-size: 4.5em;
-    text-align: center;
 }
 
 .show {
@@ -190,4 +230,18 @@ footer button:hover{
   
 .hide {
     opacity: 0;
+}
+
+.scrollItem button{
+    margin-top: 20px;
+    width: 220px;
+    padding: 10px 20px;
+    background-color: #ff8928;
+    color: white;
+    font-weight: bolder;
+}
+
+.scrollItem button:hover{
+    background-color: #ffbb83;
+    color: white;
 }
