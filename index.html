@@ -37,35 +37,34 @@
     
     <hr>
     
-    <!-- Home Page -->
-    <div class="home">
+    <div class="selfIntro">
+      <div class="scrollSection">
+        <div class="scrollContainer">
+          
+            <div class="scrollItem show">
+              <div class="SITitle">Who Am I?</div>
+            </div>
 
-      
-      <div class="rightdiv">
-        <img src="homeimage.jpg">
+            <div class="scrollItem hide">
+              <div class="SITitle">1</div>
+            </div>
+
+            <div class="scrollItem hide">
+              <div class="SITitle">2</div>
+            </div>
+
+            <div class="scrollItem hide">
+              <div class="SITitle">3</div>
+            </div>
+
+            <div class="scrollItem hide">
+              <div class="SITitle">4</div>
+            </div>
+
+        </div>
       </div>
-      
-      <div class="leftdiv">
-        <h1 class="homewelcome">Hello !</h1>
-        <h1 class="homeintro"></h1>
-      </div>
-      
     </div>
-    <hr>
-    
-    <!-- Home Page -->
-    <div class="home">
-      
-      <div class="leftdiv">
-        <h1 class="homewelcome">Hello !</h1>
-        <h1 class="homeintro"></h1>
-      </div>
-      
-      <div class="rightdiv">
-        <img src="homeimage.jpg">
-      </div>
-      
-    </div>
+
 
     <footer>
       <div class="footerElement lastFE">Copyright © 2024 stefankhor8547. All rights reserved.</p>
@@ -74,6 +73,33 @@
   </body>
   
   <script>
+
+  var currentItemIndex = 0;
+  var items = document.querySelectorAll('.scrollItem');
+  var timeoutId;
+
+  function scrollNext() {
+    clearTimeout(timeoutId); // Clear previous timeout
+    var currentItem = items[currentItemIndex];
+    var nextIndex = currentItemIndex + 1;
+    if (nextIndex >= items.length) {
+      nextIndex = 0;
+    }
+    var nextItem = items[nextIndex];
+
+    currentItem.classList.remove('show');
+    currentItem.classList.add('hide');
+    nextItem.classList.remove('hide');
+    nextItem.classList.add('show');
+
+    currentItemIndex = nextIndex;
+
+    // Set timeout to automatically transition to the next item after 5 seconds
+    timeoutId = setTimeout(scrollNext, 1000);
+  }
+
+  // Start the auto-scrolling when the page loads
+  timeoutId = setTimeout(scrollNext, 1000);
     //JavaScript to show/hide navbar on scroll
     // let lastScrollTop = 0;
     

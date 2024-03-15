@@ -21,6 +21,7 @@ a, button{
 
 
 header{
+    z-index: 999;
     top:0;
     left:0;
     position: fixed;
@@ -45,6 +46,7 @@ header img{
 header a{
     padding: 0 20px;
     transition: all 0.3s ease 0s;
+    display: inline-block;
 }
 
 header a:hover{
@@ -64,13 +66,15 @@ header button:hover{
     background-color: blue;
 }
 
-.home{
+.home,.selfIntro{
     display: flex;
     height: 100vh;
     scroll-snap-align: start;
     margin-left: calc((100% - var(--constant-site-width)) / 2);
-    margin-left: calc((100% - var(--constant-site-width)) / 2);
+    margin-right: calc((100% - var(--constant-site-width)) / 2);
     width: var(--constant-site-width);
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -152,4 +156,41 @@ footer button:hover{
 
 .lastFE{
     margin-top:auto;
+}
+
+
+
+
+.selfIntro {
+
+}
+  
+.scrollSection {
+
+}
+
+.scrollContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.scrollItem {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease;
+}
+
+.SITitle{
+    font-size: 4.5em;
+    text-align: center;
+}
+
+.show {
+    opacity: 1;
+  }
+  
+.hide {
+    opacity: 0;
 }
